@@ -5,7 +5,7 @@ const WA_NUMBER = "6288973970168"; // 088973970168 -> format internasional tanpa
 
 // kategori: "bakso" atau "mie" | harga dalam Rupiah | emoji bisa diganti
 const MENU = [
-  { id: 1,  kat: "bakso", emoji: "🍢", nama: "Bakso Biasa",  harga: 110000, desc: "Bakso sapi kenyal klasik, isi 20 butir." },
+  { id: 1,  kat: "bakso", emoji: "🍢", nama: "Bakso Biasa",  harga: 10000, desc: "Bakso sapi kenyal klasik, isi 20 butir." },
   { id: 2,  kat: "bakso", emoji: "💪", nama: "Bakso Urat",   harga: 13000, desc: "Bertekstur kasar dengan potongan urat sapi." },
   { id: 3,  kat: "bakso", emoji: "🥚", nama: "Bakso Telur",  harga: 13000, desc: "Bakso besar berisi telur puyuh utuh." },
   { id: 4,  kat: "bakso", emoji: "🥩", nama: "Bakso Tetelan",harga: 16000, desc: "Isian tetelan empuk, gurih dan juicy." },
