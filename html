@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MbunBarokah | Frozen Bakso & Mie Ayam</title>
+  <meta name="description" content="Frozen food bakso dan mie ayam rumahan: bakso urat, telur, tetelan, lava, dan mie ayam komplit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a href="#home" class="logo">Mbun<span>Barokah</span></a>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#keunggulan">Keunggulan</a>
+    <a href="#menu">Menu</a>
+    <a href="#testimoni">Testimoni</a>
+    <a href="#pesan" class="btn-sm">Pesan <b id="navCount">0</b></a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <p class="tag">Frozen food rumahan, siap santap</p>
+    <h1>Semangkuk bakso hangat, tinggal rebus.</h1>
+    <p>Bakso kenyal berkuah kaldu rempah dan mie ayam dengan topping ayam cincang gurih. Simpan di freezer, masak 10 menit, nikmati kapan saja.</p>
+    <div class="hero-btn">
+      <a href="#menu" class="btn">Lihat menu</a>
+      <a href="#pesan" class="btn ghost">Pesan lewat WhatsApp</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="bowl">🍜</div>
+    <span class="chip c1">🔥 Bakso lava pedas</span>
+    <span class="chip c2">❄️ Frozen, tahan lama</span>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section class="sec" id="tentang">
+  <div class="wrap about">
+    <h2>Tentang MbunBarokah</h2>
+    <div>
+      <p>MbunBarokah menyajikan dua ikon kuliner Nusantara: bakso dan mie ayam. Mi bersaus gurih dengan topping ayam cincang, dan bola daging kenyal dalam kuah kaldu hangat yang kaya rempah.</p>
+      <p>Pilihannya lengkap, dari bakso biasa sampai bakso lava, dari mie ayam polos sampai mie ayam bakso lava. Semua dibuat dengan resep keluarga dan dikemas beku agar rasanya tetap segar sampai di dapur Anda.</p>
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="sec alt" id="keunggulan">
+  <div class="wrap">
+    <h2>Kenapa pilih kami</h2>
+    <div class="grid3">
+      <article class="card feat"><div class="ic">🧼</div><h3>Kemasan higienis</h3><p>Dikemas vakum dan tertutup rapat, bersih dan aman dari proses produksi sampai tiba di rumah.</p></article>
+      <article class="card feat"><div class="ic">🌶️</div><h3>Sambal home-made</h3><p>Sambal racikan sendiri tanpa pengawet, pedasnya pas dan bikin ketagihan.</p></article>
+      <article class="card feat"><div class="ic">⏱️</div><h3>Praktis</h3><p>Rebus bakso, seduh mi, tambahkan topping. Siap dalam 10 menit tanpa repot belanja dan masak.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="sec" id="menu">
+  <div class="wrap">
+    <h2>Katalog menu</h2>
+    <p class="sub">Harga per pack. Klik “Tambah” untuk memasukkan ke keranjang.</p>
+    <div class="tabs" id="tabs">
+      <button class="on" data-f="semua">Semua</button>
+      <button data-f="bakso">Bakso</button>
+      <button data-f="mie">Mie Ayam</button>
+    </div>
+    <div class="grid menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- TESTIMONI -->
+<section class="sec alt" id="testimoni">
+  <div class="wrap">
+    <h2>Kata pelanggan</h2>
+    <div class="slider">
+      <button class="arrow" id="prev" aria-label="Sebelumnya">‹</button>
+      <div class="viewport"><div class="track" id="track"></div></div>
+      <button class="arrow" id="next" aria-label="Berikutnya">›</button>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+<!-- PESAN -->
+<section class="sec" id="pesan">
+  <div class="wrap order">
+    <div>
+      <h2>Keranjang & pemesanan</h2>
+      <div class="cart" id="cartBox"></div>
+    </div>
+    <form class="card form" id="orderForm">
+      <h3>Data pemesan</h3>
+      <label>Nama<input type="text" id="nama" placeholder="Nama lengkap" required></label>
+      <label>No. WhatsApp<input type="tel" id="hp" placeholder="08xxxxxxxxxx" required></label>
+      <label>Alamat pengiriman<textarea id="alamat" rows="3" placeholder="Jalan, nomor, kelurahan, kota" required></textarea></label>
+      <label>Catatan (opsional)<input type="text" id="catatan" placeholder="Contoh: sambal dipisah"></label>
+      <button type="submit" class="btn full">Kirim pesanan ke WhatsApp</button>
+      <small>Anda akan diarahkan ke WhatsApp. Pesanan dikonfirmasi oleh admin.</small>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p><b>MbunBarokah</b> · Frozen Bakso & Mie Ayam</p>
+  <p>WhatsApp: 0889-7397-0168</p>
+  <p>© <span id="yr"></span> MbunBarokah</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
