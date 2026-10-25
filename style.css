@@ -1,14 +1,17 @@
-:root{
-  --red:#c8281e; --red-d:#9c1b14; --red-l:#fde9e5;
-  --ice:#d9f3f6; --ice-d:#6cc3cf; --ink:#2a1512; --mute:#6f5a56; --bg:#fffaf7; --white:#fff;
-  --r:18px;
+:root {
+  --red: #c8281e; --red-d: #9c1b14; --red-l: #fde9e5;
+  --ice: #d9f3f6; --ice-d: #6cc3cf; --ink: #2a1512; 
+  --mute: #6f5a56; --bg: #fffaf7; --white: #fff;
+  --r: 18px;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Nunito',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
 h1,h2,h3,.logo{font-family:'Fraunces',Georgia,serif;line-height:1.15}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
+
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 .sec{padding:72px 0}
 .sec.alt{background:var(--ice)}
@@ -47,7 +50,7 @@ img{max-width:100%;display:block}
 @keyframes float{50%{transform:translateY(-10px)}}
 
 /* about */
-.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:start;margin-bottom:30px}
 .about p+p{margin-top:12px}
 
 /* cards */
@@ -56,6 +59,7 @@ img{max-width:100%;display:block}
 .feat .ic{font-size:2.2rem;margin-bottom:8px}
 .feat h3{font-size:1.25rem;color:var(--red);margin-bottom:6px}
 .feat p{color:var(--mute);font-size:.95rem}
+.member .avatar{width:90px;height:90px;object-fit:cover;border-radius:50%;margin:0 auto 12px;display:block}
 
 /* menu */
 .tabs{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
@@ -63,7 +67,8 @@ img{max-width:100%;display:block}
 .tabs button.on,.tabs button:hover{background:var(--red);color:#fff}
 .menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:20px}
 .item{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 8px 24px rgba(120,40,30,.08);display:flex;flex-direction:column}
-.item .pic{height:130px;display:grid;place-items:center;font-size:3.6rem;background:linear-gradient(135deg,var(--ice),var(--red-l))}
+.item .pic{height:150px;overflow:hidden;background:#e0f4f7}
+.item .pic img{width:100%;height:100%;object-fit:cover}
 .item .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .item h3{font-size:1.1rem}
 .item p{font-size:.88rem;color:var(--mute);flex:1}
@@ -72,21 +77,14 @@ img{max-width:100%;display:block}
 .add{border:0;cursor:pointer;background:var(--red);color:#fff;font:700 .9rem 'Nunito',sans-serif;padding:8px 16px;border-radius:99px}
 .add:hover{background:var(--red-d)}
 
-/* slider */
-.slider{display:flex;align-items:center;gap:10px;margin-top:20px}
-.viewport{overflow:hidden;flex:1;border-radius:var(--r)}
-.track{display:flex;transition:transform .5s ease}
-.slide{min-width:100%;padding:6px}
-.review{background:#fff;border-radius:var(--r);padding:26px;display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;box-shadow:0 8px 24px rgba(30,100,110,.12)}
-.photo{width:200px;height:200px;border-radius:var(--r);object-fit:cover;background:linear-gradient(135deg,var(--red-l),var(--ice));display:grid;place-items:center;font-size:4rem}
+/* slider testimoni */
+.review{background:#fff;border-radius:var(--r);padding:26px;display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:center;box-shadow:0 8px 24px rgba(30,100,110,.12)}
+.photo{width:160px;height:160px;border-radius:var(--r);overflow:hidden}
 .stars{color:#f2a900;letter-spacing:2px}
 .review q{display:block;margin:8px 0 12px;font-size:1.05rem;quotes:none}
 .review b{color:var(--red-d)}
-.arrow{border:0;background:var(--red);color:#fff;width:42px;height:42px;border-radius:50%;font-size:1.6rem;cursor:pointer;flex:none}
+.arrow{border:0;background:var(--red);color:#fff;width:42px;height:42px;border-radius:50%;font-size:1.4rem;cursor:pointer;display:grid;place-items:center}
 .arrow:hover{background:var(--red-d)}
-.dots{display:flex;justify-content:center;gap:8px;margin-top:16px}
-.dots button{width:10px;height:10px;border-radius:50%;border:0;background:#9fcfd5;cursor:pointer}
-.dots button.on{background:var(--red);width:26px;border-radius:99px}
 
 /* order */
 .order{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:start}
@@ -103,11 +101,17 @@ img{max-width:100%;display:block}
 .form label{display:block;font-weight:700;font-size:.9rem;margin-bottom:12px}
 .form input,.form textarea{width:100%;margin-top:4px;padding:11px 13px;border:2px solid #efd9d3;border-radius:12px;font:inherit;background:var(--bg)}
 .form input:focus,.form textarea:focus{outline:none;border-color:var(--ice-d)}
-.form small{color:var(--mute)}
 
-footer{background:var(--red-d);color:#ffe9e4;text-align:center;padding:30px 20px;font-size:.92rem}
-.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:99px;font-weight:700;z-index:99;animation:pop .25s}
-@keyframes pop{from{opacity:0;transform:translate(-50%,10px)}}
+/* footer ala contoh */
+footer{background-color:#1a1d20;color:#a0aec0;padding:50px 20px 20px 20px;font-family:'Nunito',sans-serif}
+.footer-content{max-width:1080px;margin:0 auto;display:flex;justify-content:flex-end}
+.footer-col h3{color:#ffffff;font-size:1.25rem;font-weight:700;margin-bottom:24px;font-family:'Fraunces',Georgia,serif}
+.contact-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px}
+.contact-list li{display:flex;align-items:center;gap:16px}
+.contact-icon{width:48px;height:48px;background-color:transparent;border:2px solid #2d3748;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-text span{font-size:0.85rem;color:#718096;display:block}
+.contact-text p{font-size:0.95rem;color:#e2e8f0;margin:0;font-weight:600}
+.footer-bottom{text-align:center;border-top:1px solid #2d3748;margin-top:40px;padding-top:20px;font-size:0.85rem;color:#718096}
 
 /* responsive */
 @media(max-width:820px){
@@ -119,8 +123,6 @@ footer{background:var(--red-d);color:#ffe9e4;text-align:center;padding:30px 20px
 @media(max-width:560px){
   .review{grid-template-columns:1fr;text-align:center}
   .photo{width:100%;height:190px;margin:0 auto}
-  .arrow{width:34px;height:34px}
   .line{grid-template-columns:1fr auto}
   .line .rm{grid-column:2;grid-row:1}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

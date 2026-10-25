@@ -2,173 +2,407 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MbunBarokah | Bakso & Mie Ayam Siap Santap dan Antar</title>
-  <meta name="description" content="Bakso dan mie ayam siap santap di Karangmalang, Sragen. Makan di tempat atau diantar: bakso urat, telur, tetelan, lava, dan mie ayam komplit.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MbunBarokah - Bakso & Mie Ayam Karangmalang, Sragen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="nav">
-  <a href="#home" class="logo">Mbun<span>Barokah</span></a>
-  <nav>
-    <a href="#tentang">Tentang</a>
-    <a href="#menu">Menu</a>
-    <a href="#testimoni">Testimoni</a>
-    <a href="#pesan" class="btn-sm">Pesan <b id="navCount">0</b></a>
-  </nav>
-</header>
+  <!-- NAVIGASI -->
+  <header class="nav">
+    <div class="logo">Mbun<span>Barokah</span></div>
+    <nav>
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#order" class="btn-sm">Pesan <b id="cart-count">0</b></a>
+    </nav>
+  </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-text">
-    <p class="tag">Siap santap di toko & bisa diantar</p>
-    <h1>Bakso & mie ayam hangat, siap santap atau diantar.</h1>
-    <p>Bakso kenyal berkuah kaldu rempah dan mie ayam dengan topping ayam cincang gurih. Nikmati langsung di toko kami di Karangmalang, Sragen, atau pesan lewat WhatsApp dan kami antar.</p>
-    <div class="hero-btn">
-      <a href="#menu" class="btn">Lihat menu</a>
-      <a href="#pesan" class="btn ghost">Pesan lewat WhatsApp</a>
-    </div>
-  </div>
-  <div class="hero-art" aria-hidden="true">
-    <div class="bowl">
-      <img src="assets/toko.png" alt="Mie Ayam MbunBarokah" class="bowl-img">
-    <span class="chip c1">🔥 Bakso lava pedas</span>
-    <span class="chip c2">🛵 Bisa diantar ke rumah</span>
-  </div>
-</section>
-
-<!-- TENTANG (brand + lokasi + pemilik + tim) -->
-<section class="sec" id="tentang">
-  <div class="wrap">
-    <h2>Tentang MbunBarokah</h2>
-    <div class="abt">
-      <div>
-        <p>MbunBarokah menyajikan dua ikon kuliner Nusantara: bakso dan mie ayam. Mi bersaus gurih dengan topping ayam cincang, dan bola daging kenyal dalam kuah kaldu hangat yang kaya rempah.</p>
-        <p>Pilihannya lengkap, dari bakso biasa sampai bakso lava, dari mie ayam polos sampai mie ayam bakso lava. Semua dimasak segar setiap hari dengan resep keluarga, bisa disantap langsung di toko atau diantar ke rumah Anda.</p>
-      </div>
-      <div class="loccard">
-        <h3>Lokasi & alamat</h3>
-        <p><b>MbunBarokah</b><br>Jl. Dewi Sartika No.16, Karang Malang, Plumbungan, Kec. Karangmalang, Kabupaten Sragen, Jawa Tengah 57222</p>
-        <p class="role">Buka setiap hari, 09.00 - 21.00 WIB</p>
-        <iframe title="Peta lokasi MbunBarokah" loading="lazy" src="https://www.google.com/maps?q=Karangmalang,+Sragen&output=embed"></iframe>
-        <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Karangmalang+Sragen">Buka di Google Maps</a>
-      </div>
-    </div>
-
-    <h3 class="subhead">Pemilik & Tim</h3>
-    <div class="people">
-      <article class="card member owner-card">
-        <img class="avatar" src="img/pemilik.jpg" alt="Pemilik MbunBarokah" onerror="this.outerHTML='<div class=&quot;avatar&quot;>👨‍🍳</div>'">
-        <h3>Nuril Maratin</h3>
-        <p class="role">Pemilik</p>
-        <p>Berawal dari warung kecil di Karangmalang, Sragen, MbunBarokah tumbuh melayani semangkuk kehangatan bakso dan mie ayam. Kini, selain bisa dinikmati langsung di tempat, hidangan kami juga siap diantar ke rumah.</p>
-        <p class="quote">“Rasa yang jujur dan bahan yang bersih adalah janji kami.”</p>
-      </article>
-      <article class="card member">
-        <img class="avatar" src="assets/Sofita.jpeg" alt="Sofita Dea" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; display: block; margin-right: auto; margin-left: 0;" onerror="this.outerHTML='<div class=&quot;avatar&quot;>👨‍🍳</div>'">
-        <h3>Sofita Dea</h3>
-        <p class="role">Tim marketing</p>
-        <p>Menangani pesanan, promo, dan kerja sama.</p>
-      </article>
-      <article class="card member">
-        <img class="avatar" src="img/tim2.jpg" alt="Adit" onerror="this.outerHTML='<div class=&quot;avatar&quot;>👩</div>'">
-        <h3>Adit</h3>
-        <p class="role">Tim Pelayanan</p>
-        <p>Mengelola oprasional toko dan layanan pelanggan.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- KEUNGGULAN -->
-<section class="sec alt" id="keunggulan">
-  <div class="wrap">
-    <h2>Kenapa pilih kami</h2>
-    <div class="grid3">
-      <article class="card feat"><div class="ic">🧼</div><h3>Kemasan higienis</h3><p>Kuah, mi, dan sambal dikemas terpisah dalam wadah bersih dan tertutup rapat, tetap hangat dan tidak tumpah saat diantar.</p></article>
-      <article class="card feat"><div class="ic">🌶️</div><h3>Sambal home-made</h3><p>Sambal racikan sendiri setiap hari, pedasnya pas dan bikin ketagihan.</p></article>
-      <article class="card feat"><div class="ic">⏱️</div><h3>Praktis, siap santap & antar</h3><p>Pesan lewat WhatsApp, lalu makan di tempat, ambil sendiri, atau minta diantar. Tanpa repot masak.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- MENU -->
-<section class="sec" id="menu">
-  <div class="wrap">
-    <h2>Katalog menu</h2>
-    <p class="sub">Harga per porsi. Klik “Tambah” untuk memasukkan ke keranjang.</p>
-    <div class="tabs" id="tabs">
-      <button class="on" data-f="semua">Semua</button>
-      <button data-f="bakso">Bakso</button>
-      <button data-f="mie">Mie Ayam</button>
-    </div>
-    <div class="grid menu-grid" id="menuGrid"></div>
-  </div>
-</section>
-
-<!-- TESTIMONI -->
-<section class="sec alt" id="testimoni">
-  <div class="wrap">
-    <h2>Kata pelanggan</h2>
-    <div class="slider">
-      <button class="arrow" id="prev" aria-label="Sebelumnya">‹</button>
-      <div class="viewport"><div class="track" id="track"></div></div>
-      <button class="arrow" id="next" aria-label="Berikutnya">›</button>
-    </div>
-    <div class="dots" id="dots"></div>
-  </div>
-</section>
-
-<!-- PESAN -->
-<section class="sec" id="pesan">
-  <div class="wrap order">
+  <!-- HERO SECTION -->
+  <section class="hero">
     <div>
-      <h2>Keranjang & pemesanan</h2>
-      <div class="cart" id="cartBox"></div>
+      <span class="tag">Khas Karangmalang, Sragen</span>
+      <h1>Semangkuk Kehangatan, Rasa yang Jujur</h1>
+      <p>Nikmati kelezatan bakso kenyal dan mie ayam gurih khas MbunBarokah. Bisa dinikmati langsung di tempat atau siap diantar ke rumahmu!</p>
+      <div class="hero-btn">
+        <a href="#menu" class="btn">Lihat Menu</a>
+        <a href="#order" class="btn ghost">Pesan Sekarang</a>
+      </div>
     </div>
-    <form class="card form" id="orderForm">
-      <h3>Data pemesan</h3>
-      <label>Nama<input type="text" id="nama" placeholder="Nama lengkap" required></label>
-      <label>No. WhatsApp<input type="tel" id="hp" placeholder="08xxxxxxxxxx" required></label>
-      <label>Metode<select id="metode"><option value="Diantar">Diantar ke alamat</option><option value="Ambil di toko">Ambil di toko</option><option value="Makan di tempat">Makan di tempat</option></select></label>
-      <label>Alamat pengantaran (jika diantar)<textarea id="alamat" rows="3" placeholder="Jalan, nomor, desa/kelurahan"></textarea></label>
-      <label>Catatan (opsional)<input type="text" id="catatan" placeholder="Contoh: sambal dipisah"></label>
-      <button type="submit" class="btn full">Kirim pesanan ke WhatsApp</button>
-      <small>Anda akan diarahkan ke WhatsApp. Pesanan dan ongkos kirim dikonfirmasi oleh admin.</small>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap footer-content">
-    <div class="footer-col">
-      <h3>Contact Info</h3>
-      <ul class="contact-list">
-        <li>
-          <div class="contact-icon" style="color: #ffffff;">📍</div>
-          <div class="contact-text">
-            <span>Address:</span>
-            <p>Karangmalang, Sragen, Jawa Tengah</p>
-          </div>
-        </li>
-        <li>
-          <div class="contact-icon" style="color: #ffffff;">📞</div>
-          <div class="contact-text">
-            <span>Phone:</span>
-            <p>+62 878-3634-5222</p>
-          </div>
-        </li>
-      </ul>
+    <div class="hero-art">
+      <div class="bowl">🍜</div>
+      <div class="chip c1">🔥 Kuah Kaldu Segar</div>
+      <div class="chip c2">🛵 Siap Antar</div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 MbunBarokah. All rights reserved.</p>
-  </div>
-</footer>
+  </section>
 
-<script src="script.js"></script>
+  <!-- TENTANG & TIM -->
+  <section class="sec alt" id="tentang">
+    <div class="wrap">
+      <h2>Tentang MbunBarokah & Tim</h2>
+      <p class="sub">Kenali lebih dekat siapa di balik kelezatan hidangan kami.</p>
+      
+      <div class="about">
+        <div>
+          <p>Berawal dari warung kecil di Karangmalang, Sragen, Jawa Tengah, MbunBarokah tumbuh melayani semangkuk kehangatan bakso dan mie ayam berkualitas tinggi dengan harga yang bersahabat.</p>
+          <p>Kami berkomitmen untuk selalu menjaga kebersihan, kualitas bahan baku pilihan, serta bumbu rempah otentik yang diracik sepenuh hati.</p>
+        </div>
+        <div>
+          <h3 class="subhead" style="color:var(--red); margin-bottom:12px;">Pemilik & Tim</h3>
+          <div class="people-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <!-- Pemilik -->
+            <article class="card member">
+              <img class="avatar" src="assets/pemilik.jpg" alt="Nuril Maratin" onerror="this.outerHTML='<div class=&quot;avatar&quot; style=&quot;width:80px;height:80px;border-radius:50%;background:var(--red-l);display:grid;place-items:center;font-size:2rem;margin:0 auto 12px&quot;>👨‍🍳</div>'">
+              <h4 style="color:var(--red-d); text-align:center;">Nuril Maratin</h4>
+              <p class="role" style="text-align:center; font-weight:700; font-size:0.85rem; color:var(--mute);">Pemilik</p>
+            </article>
+            <!-- Marketing 1 -->
+            <article class="card member">
+              <img class="avatar" src="assets/marketing1.jpg" alt="Tim Marketing 1" onerror="this.outerHTML='<div class=&quot;avatar&quot; style=&quot;width:80px;height:80px;border-radius:50%;background:var(--ice);display:grid;place-items:center;font-size:2rem;margin:0 auto 12px&quot;>👩‍💼</div>'">
+              <h4 style="color:var(--red-d); text-align:center;">Siti Aminah</h4>
+              <p class="role" style="text-align:center; font-weight:700; font-size:0.85rem; color:var(--mute);">Tim Marketing</p>
+            </article>
+            <!-- Marketing 2 -->
+            <article class="card member">
+              <img class="avatar" src="assets/marketing2.jpg" alt="Tim Marketing 2" onerror="this.outerHTML='<div class=&quot;avatar&quot; style=&quot;width:80px;height:80px;border-radius:50%;background:var(--ice);display:grid;place-items:center;font-size:2rem;margin:0 auto 12px&quot;>👨‍💼</div>'">
+              <h4 style="color:var(--red-d); text-align:center;">Ahmad Fauzi</h4>
+              <p class="role" style="text-align:center; font-weight:700; font-size:0.85rem; color:var(--mute);">Tim Marketing</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- KEUNGGULAN PRODUK -->
+      <div class="grid3">
+        <div class="card feat">
+          <div class="ic">🛡️</div>
+          <h3>Kemasan Hygienic</h3>
+          <p>Dikemas rapi dan aman berstandar tinggi untuk menjaga kualitas makanan tetap hangat dan higienis sampai di rumah.</p>
+        </div>
+        <div class="card feat">
+          <div class="ic">🌶️</div>
+          <h3>Sambal Home-made</h3>
+          <p>Terbuat dari cabai pilihan segar berkualitas tinggi, diracik khusus pedas nikmat menggugah selera.</p>
+        </div>
+        <div class="card feat">
+          <div class="ic">🚀</div>
+          <h3>Praktis Siap Santap</h3>
+          <p>Sangat cepat disajikan, cocok dinikmati kapan saja baik di toko langsung maupun via layanan antar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KATALOG MENU (MENGGUNAKAN HTML LANGSUNG & GAMBAR) -->
+  <section class="sec" id="menu">
+    <div class="wrap">
+      <h2>Katalog Menu</h2>
+      <p class="sub">Pilih menu favoritmu. Klik “Tambah” untuk memesan.</p>
+      
+      <div class="tabs" id="tabs">
+        <button class="on" data-f="semua">Semua</button>
+        <button data-f="bakso">Bakso</button>
+        <button data-f="mie">Mie Ayam</button>
+      </div>
+
+      <div class="grid menu-grid" id="menuGrid">
+        
+        <!-- 1. Bakso Biasa -->
+        <div class="item" data-kat="bakso">
+          <div class="pic"><img src="assets/bakso-biasa.jpg" alt="Bakso Biasa" onerror="this.src='https://via.placeholder.com/300?text=Bakso+Biasa'"></div>
+          <div class="body">
+            <h3>Bakso Biasa</h3>
+            <p>Bakso sapi kenyal klasik, kuah kaldu hangat kaya rempah.</p>
+            <div class="row">
+              <span class="price">Rp12.000</span>
+              <button class="add" onclick="tambahItem(1, 'Bakso Biasa', 12000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Bakso Urat -->
+        <div class="item" data-kat="bakso">
+          <div class="pic"><img src="assets/bakso-urat.jpg" alt="Bakso Urat" onerror="this.src='https://via.placeholder.com/300?text=Bakso+Urat'"></div>
+          <div class="body">
+            <h3>Bakso Urat</h3>
+            <p>Bertekstur kasar dengan sensasi urat sapi pilihan yang mantap.</p>
+            <div class="row">
+              <span class="price">Rp15.000</span>
+              <button class="add" onclick="tambahItem(2, 'Bakso Urat', 15000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Bakso Telur -->
+        <div class="item" data-kat="bakso">
+          <div class="pic"><img src="assets/bakso-telur.jpg" alt="Bakso Telur" onerror="this.src='https://via.placeholder.com/300?text=Bakso+Telur'"></div>
+          <div class="body">
+            <h3>Bakso Telur</h3>
+            <p>Bakso ukuran besar berisi isian telur utuh yang mengenyangkan.</p>
+            <div class="row">
+              <span class="price">Rp17.000</span>
+              <button class="add" onclick="tambahItem(3, 'Bakso Telur', 17000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Bakso Tetelan -->
+        <div class="item" data-kat="bakso">
+          <div class="pic"><img src="assets/bakso-tetelan.jpg" alt="Bakso Tetelan" onerror="this.src='https://via.placeholder.com/300?text=Bakso+Tetelan'"></div>
+          <div class="body">
+            <h3>Bakso Tetelan</h3>
+            <p>Disajikan dengan tambahan isian tetelan empuk, gurih, dan juicy.</p>
+            <div class="row">
+              <span class="price">Rp17.000</span>
+              <button class="add" onclick="tambahItem(4, 'Bakso Tetelan', 17000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Bakso Lava -->
+        <div class="item" data-kat="bakso">
+          <div class="pic"><img src="assets/bakso-lava.jpg" alt="Bakso Lava" onerror="this.src='https://via.placeholder.com/300?text=Bakso+Lava'"></div>
+          <div class="body">
+            <h3>Bakso Lava</h3>
+            <p>Bakso raksasa dengan isian sambal cabai super pedas meleleh di dalam.</p>
+            <div class="row">
+              <span class="price">Rp18.000</span>
+              <button class="add" onclick="tambahItem(5, 'Bakso Lava', 18000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Mie Ayam -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-ayam.jpg" alt="Mie Ayam" onerror="this.src='https://via.placeholder.com/300?text=Mie+Ayam'"></div>
+          <div class="body">
+            <h3>Mie Ayam</h3>
+            <p>Mi kenyal berpadu topping ayam cincang manis gurih khas.</p>
+            <div class="row">
+              <span class="price">Rp10.000</span>
+              <button class="add" onclick="tambahItem(6, 'Mie Ayam', 10000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Mie Yamin -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-yamin.jpg" alt="Mie Yamin" onerror="this.src='https://via.placeholder.com/300?text=Mie+Yamin'"></div>
+          <div class="body">
+            <h3>Mie Yamin</h3>
+            <p>Mi yamin khas manis gurih lengkap dengan topping ayam dan pangsit.</p>
+            <div class="row">
+              <span class="price">Rp12.000</span>
+              <button class="add" onclick="tambahItem(7, 'Mie Yamin', 12000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Mie Ayam Ceker -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-ceker.jpg" alt="Mie Ayam Ceker" onerror="this.src='https://via.placeholder.com/300?text=Mie+Ayam+Ceker'"></div>
+          <div class="body">
+            <h3>Mie Ayam Ceker</h3>
+            <p>Mie ayam spesial disandingkan ceker empuk berbumbu meresap.</p>
+            <div class="row">
+              <span class="price">Rp14.000</span>
+              <button class="add" onclick="tambahItem(8, 'Mie Ayam Ceker', 14000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Mie Ayam Pangsit Basah -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-pangsit.jpg" alt="Mie Ayam Pangsit Basah" onerror="this.src='https://via.placeholder.com/300?text=Mie+Pangsit'"></div>
+          <div class="body">
+            <h3>Mie Ayam Pangsit Basah</h3>
+            <p>Disajikan bersama pangsit basah lembut berisikan daging gurih.</p>
+            <div class="row">
+              <span class="price">Rp14.000</span>
+              <button class="add" onclick="tambahItem(9, 'Mie Ayam Pangsit Basah', 14000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Mie Ayam Bakso Urat -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-bakso-urat.jpg" alt="Mie Ayam Bakso Urat" onerror="this.src='https://via.placeholder.com/300?text=Mie+Bakso+Urat'"></div>
+          <div class="body">
+            <h3>Mie Ayam Bakso Urat</h3>
+            <p>Perpaduan komplit mie ayam nikmat ditambah satu butir bakso urat besar.</p>
+            <div class="row">
+              <span class="price">Rp17.000</span>
+              <button class="add" onclick="tambahItem(10, 'Mie Ayam Bakso Urat', 17000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Mie Ayam Bakso Telur -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-bakso-telur.jpg" alt="Mie Ayam Bakso Telur" onerror="this.src='https://via.placeholder.com/300?text=Mie+Bakso+Telur'"></div>
+          <div class="body">
+            <h3>Mie Ayam Bakso Telur</h3>
+            <p>Porsi mantap mie ayam komplit bersama bakso telur utuh.</p>
+            <div class="row">
+              <span class="price">Rp19.000</span>
+              <button class="add" onclick="tambahItem(11, 'Mie Ayam Bakso Telur', 19000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Mie Ayam Bakso Lava -->
+        <div class="item" data-kat="mie">
+          <div class="pic"><img src="assets/mie-bakso-lava.jpg" alt="Mie Ayam Bakso Lava" onerror="this.src='https://via.placeholder.com/300?text=Mie+Bakso+Lava'"></div>
+          <div class="body">
+            <h3>Mie Ayam Bakso Lava</h3>
+            <p>Nikmatnya mie ayam spesial dipadu sensasi bakso lava pedas membahana.</p>
+            <div class="row">
+              <span class="price">Rp20.000</span>
+              <button class="add" onclick="tambahItem(12, 'Mie Ayam Bakso Lava', 20000)">Tambah</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI (MENGGUNAKAN HTML LANGSUNG & GAMBAR) -->
+  <section class="sec alt" id="testimoni">
+    <div class="wrap">
+      <h2>Apa Kata Pelanggan</h2>
+      <p class="sub">Pendapat jujur dari para penikmat kuliner MbunBarokah.</p>
+      
+      <div class="slider-container" style="position: relative; max-width: 800px; margin: 0 auto;">
+        <div class="slides-wrapper" style="overflow: hidden;">
+          <div class="slides-track" id="slidesTrack" style="display: flex; transition: transform 0.4s ease;">
+            
+            <!-- Review 1 -->
+            <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 10px;">
+              <div class="review">
+                <div class="photo">
+                  <img src="assets/testi1.jpg" alt="Rina" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--r);" onerror="this.src='https://via.placeholder.com/200?text=Rina'">
+                </div>
+                <div>
+                  <div class="stars">★★★★★</div>
+                  <q>Bakso lavanya pedasnya pas dan kuah kaldu hangatnya segar banget di badan!</q>
+                  <b>Rina, Sragen</b>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 10px;">
+              <div class="review">
+                <div class="photo">
+                  <img src="assets/testi2.jpg" alt="Dimas" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--r);" onerror="this.src='https://via.placeholder.com/200?text=Dimas'">
+                </div>
+                <div>
+                  <div class="stars">★★★★★</div>
+                  <q>Mie ayam bakso uratnya juara! Porsinya pas mengenyangkan dan dagingnya terasa banget.</q>
+                  <b>Dimas, Karanganyar</b>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="slide" style="min-width: 100%; box-sizing: border-box; padding: 10px;">
+              <div class="review">
+                <div class="photo">
+                  <img src="assets/testi3.jpg" alt="Sari" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--r);" onerror="this.src='https://via.placeholder.com/200?text=Sari'">
+                </div>
+                <div>
+                  <div class="stars">★★★★★</div>
+                  <q>Sambal home-made nya beneran mantap dan segar. Pengiriman pesanan juga cepat!</q>
+                  <b>Sari, Solo</b>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tombol Slider -->
+        <div style="display: flex; justify-content: center; gap: 12px; margin-top: 16px;">
+          <button class="arrow" onclick="geserSlide(-1)">❮</button>
+          <button class="arrow" onclick="geserSlide(1)">❯</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM PEMESANAN & KERANJANG -->
+  <section class="sec" id="order">
+    <div class="wrap">
+      <h2>Pemesanan & Keranjang</h2>
+      <p class="sub">Periksa pesananmu dan isi detail pengiriman di bawah ini.</p>
+      
+      <div class="order">
+        <div class="cart">
+          <h3>Keranjang Anda</h3>
+          <div id="cart-items">
+            <div class="empty">Keranjang masih kosong. Yuk tambah menu pilihanmu!</div>
+          </div>
+          <div class="total">
+            <span>Total:</span>
+            <span id="cart-total">Rp0</span>
+          </div>
+        </div>
+
+        <div class="form">
+          <h3>Informasi Pengiriman</h3>
+          <form id="checkout-form" onsubmit="kirimWhatsApp(event)">
+            <label>
+              Nama Lengkap
+              <input type="text" id="nama" required placeholder="Contoh: Budi Santoso">
+            </label>
+            <label style="margin-top: 12px;">
+              Nomor WhatsApp / HP
+              <input type="tel" id="telepon" required placeholder="Contoh: 081234567890">
+            </label>
+            <label style="margin-top: 12px;">
+              Alamat Lengkap / Catatan Pengiriman
+              <textarea id="alamat" rows="3" required placeholder="Contoh: Jl. Raya Karangmalang No. 12, Sragen"></textarea>
+            </label>
+            <button type="submit" class="btn full" style="margin-top: 18px;">Kirim Pesanan ke WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap footer-content">
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul class="contact-list">
+          <li>
+            <div class="contact-icon" style="color:#ffffff;">📍</div>
+            <div class="contact-text">
+              <span>Address:</span>
+              <p>Karangmalang, Sragen, Jawa Tengah</p>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon" style="color:#ffffff;">📞</div>
+            <div class="contact-text">
+              <span>Phone:</span>
+              <p>+62 889-7397-0168</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 MbunBarokah. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
