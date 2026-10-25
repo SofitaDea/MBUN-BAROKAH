@@ -1,28 +1,28 @@
 /* =====================================================
    PENGATURAN — edit bagian ini saja untuk ubah data
    ===================================================== */
-const WA_NUMBER = "6287836345222"; // 087836345222 -> format internasional tanpa +
+const WA_NUMBER = "6288973970168"; // 088973970168 -> format internasional tanpa +
 
-// kategori: "bakso" atau "mie" | harga dalam Rupiah | emoji bisa diganti
+// kategori: "bakso" atau "mie" | harga dalam Rupiah per porsi | emoji bisa diganti
 const MENU = [
-  { id: 1,  kat: "bakso", emoji: "💪", nama: "Bakso Biasa",  harga: 10000, desc: "Bakso sapi kenyal klasik, isi 20 butir." },
-  { id: 2,  kat: "bakso", emoji: "💪", nama: "Bakso Urat",   harga: 13000, desc: "Bertekstur kasar dengan potongan urat sapi." },
-  { id: 3,  kat: "bakso", emoji: "🥚", nama: "Bakso Telur",  harga: 13000, desc: "Bakso besar berisi telur puyuh utuh." },
-  { id: 4,  kat: "bakso", emoji: "🥩", nama: "Bakso Tetelan",harga: 16000, desc: "Isian tetelan empuk, gurih dan juicy." },
-  { id: 5,  kat: "bakso", emoji: "🌋", nama: "Bakso Lava",   harga: 15000, desc: "Isian sambal cabai pedas meleleh di dalam." },
-  { id: 6,  kat: "mie",   emoji: "🍜", nama: "Mie Ayam",     harga: 8000, desc: "Mi kenyal, ayam cincang manis gurih." },
-  { id: 7,  kat: "mie",   emoji: "🍝", nama: "Mie Yamin",    harga: 9000, desc: "Mi yamin manis, topping ayam dan pangsit." },
-  { id: 8,  kat: "mie",   emoji: "🍗", nama: "Mie Ayam Ceker",           harga: 9000, desc: "Mie ayam dengan ceker empuk berbumbu." },
-  { id: 9,  kat: "mie",   emoji: "🥟", nama: "Mie Ayam Pangsit Basah",   harga: 10000, desc: "Mie ayam dengan pangsit basah lembut." },
-  { id: 10, kat: "mie",   emoji: "🍜", nama: "Mie Ayam Bakso Urat",      harga: 10000, desc: "Mie ayam komplit plus bakso urat." },
-  { id: 11, kat: "mie",   emoji: "🍜", nama: "Mie Ayam Bakso Telur",     harga: 15000, desc: "Mie ayam komplit plus bakso telur." },
-  { id: 12, kat: "mie",   emoji: "🌋", nama: "Mie Ayam Bakso Lava",      harga: 17000, desc: "Mie ayam komplit plus bakso lava pedas." }
+  { id: 1,  kat: "bakso", emoji: "🍢", nama: "Bakso Biasa",  harga: 12000, desc: "Bakso sapi kenyal klasik, kuah kaldu hangat." },
+  { id: 2,  kat: "bakso", emoji: "💪", nama: "Bakso Urat",   harga: 15000, desc: "Bertekstur kasar dengan potongan urat sapi." },
+  { id: 3,  kat: "bakso", emoji: "🥚", nama: "Bakso Telur",  harga: 17000, desc: "Bakso besar berisi telur puyuh utuh." },
+  { id: 4,  kat: "bakso", emoji: "🥩", nama: "Bakso Tetelan",harga: 17000, desc: "Isian tetelan empuk, gurih dan juicy." },
+  { id: 5,  kat: "bakso", emoji: "🌋", nama: "Bakso Lava",   harga: 18000, desc: "Isian sambal cabai pedas meleleh di dalam." },
+  { id: 6,  kat: "mie",   emoji: "🍜", nama: "Mie Ayam",     harga: 10000, desc: "Mi kenyal, ayam cincang manis gurih." },
+  { id: 7,  kat: "mie",   emoji: "🍝", nama: "Mie Yamin",    harga: 12000, desc: "Mi yamin manis, topping ayam dan pangsit." },
+  { id: 8,  kat: "mie",   emoji: "🍗", nama: "Mie Ayam Ceker",           harga: 14000, desc: "Mie ayam dengan ceker empuk berbumbu." },
+  { id: 9,  kat: "mie",   emoji: "🥟", nama: "Mie Ayam Pangsit Basah",   harga: 14000, desc: "Mie ayam dengan pangsit basah lembut." },
+  { id: 10, kat: "mie",   emoji: "🍜", nama: "Mie Ayam Bakso Urat",      harga: 17000, desc: "Mie ayam komplit plus bakso urat." },
+  { id: 11, kat: "mie",   emoji: "🍜", nama: "Mie Ayam Bakso Telur",     harga: 19000, desc: "Mie ayam komplit plus bakso telur." },
+  { id: 12, kat: "mie",   emoji: "🌋", nama: "Mie Ayam Bakso Lava",      harga: 20000, desc: "Mie ayam komplit plus bakso lava pedas." }
 ];
 
 // foto: taruh gambar di folder img/ lalu isi nama file. Jika kosong/tidak ada, tampil emoji.
 const TESTIMONI = [
   { nama: "Rina, Solo",       bintang: 5, foto: "img/testi1.jpg", teks: "Bakso lavanya pedasnya pas, kuahnya gurih. Anak-anak sampai minta tambah!" },
-  { nama: "Dimas, Karanganyar",bintang: 5, foto: "img/testi2.jpg", teks: "Mie ayam bakso uratnya enak banget, praktis buat stok anak kos." },
+  { nama: "Dimas, Karanganyar",bintang: 5, foto: "img/testi2.jpg", teks: "Mie ayam bakso uratnya enak banget, porsinya pas dan diantar cepat sampai kos." },
   { nama: "Sari, Sukoharjo",  bintang: 4, foto: "img/testi3.jpg", teks: "Sambalnya home-made dan segar. Kemasan rapi dan bersih." }
 ];
 
@@ -93,8 +93,12 @@ document.getElementById("orderForm").addEventListener("submit", e => {
   e.preventDefault();
   if (!Object.keys(cart).length) { toast("Keranjang masih kosong"); return; }
   const v = id => document.getElementById(id).value.trim();
+  const metode = v("metode");
+  if (metode === "Diantar" && !v("alamat")) { toast("Isi alamat untuk pengantaran"); return; }
   let pesan = "*PESANAN BARU - MbunBarokah*\n\n";
-  pesan += `Nama: ${v("nama")}\nNo. WA: ${v("hp")}\nAlamat: ${v("alamat")}\n\n*Rincian pesanan:*\n`;
+  pesan += `Nama: ${v("nama")}\nNo. WA: ${v("hp")}\nMetode: ${metode}\n`;
+  if (metode === "Diantar") pesan += `Alamat: ${v("alamat")}\n`;
+  pesan += "\n*Rincian pesanan:*\n";
   Object.entries(cart).forEach(([id, q], i) => {
     const m = MENU.find(x => x.id == id);
     pesan += `${i + 1}. ${m.nama} x${q} = ${rupiah(m.harga * q)}\n`;
