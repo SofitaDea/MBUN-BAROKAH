@@ -1,7 +1,7 @@
 /* =====================================================
    PENGATURAN — edit bagian ini saja untuk ubah data
    ===================================================== */
-const WA_NUMBER = "6288973970168"; // 088973970168 -> format internasional tanpa +
+const WA_NUMBER = "6287836345222"; // 087836345222 -> format internasional tanpa +
 
 // kategori: "bakso" atau "mie" | harga dalam Rupiah | emoji bisa diganti
 const MENU = [
