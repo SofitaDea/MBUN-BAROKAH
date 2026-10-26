@@ -70,7 +70,6 @@ function updateKeranjang() {
     countEl.innerText = totalQty;
 }
 
-// Fungsi Kirim Pesanan ke WhatsApp
 function kirimWhatsApp(event) {
     event.preventDefault();
 
@@ -81,6 +80,7 @@ function kirimWhatsApp(event) {
 
     const nama = document.getElementById('nama').value.trim();
     const telepon = document.getElementById('telepon').value.trim();
+    const metode = document.getElementById('metode').value; // Mengambil nilai metode pesanan
     const alamat = document.getElementById('alamat').value.trim();
 
     let pesan = `Halo MbunBarokah, saya ingin memesan:\n\n`;
@@ -96,6 +96,7 @@ function kirimWhatsApp(event) {
     pesan += `*Data Pemesan:*\n`;
     pesan += `Nama: ${nama}\n`;
     pesan += `No. HP: ${telepon}\n`;
+    pesan += `Metode: ${metode}\n`; // Menampilkan metode di pesan WA
     pesan += `Alamat/Catatan: ${alamat}\n\n`;
     pesan += `Mohon segera diproses ya, terima kasih!`;
 

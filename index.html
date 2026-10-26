@@ -371,29 +371,40 @@
           </div>
         </div>
 
-        <div class="form">
-          <h3>Informasi Pengiriman</h3>
-          <form id="checkout-form" onsubmit="kirimWhatsApp(event)">
-            <label>
-              Nama Lengkap
-              <input type="text" id="nama" required placeholder="Contoh: Budi Santoso">
-            </label>
-            </label>
-      <label>Metode<select id="metode"><option value="Diantar">Diantar ke alamat</option><option value="Ambil di toko">Ambil di toko</option><option value="Makan di tempat">Makan di tempat</option></select></label>
-            <label style="margin-top: 12px;">
-              Nomor WhatsApp / HP
-              <input type="tel" id="telepon" required placeholder="Contoh: 081xxxxxxxxxxx">
-            </label>
-            <label style="margin-top: 12px;">
-              Alamat Lengkap / Catatan Pengiriman
-              <textarea id="alamat" rows="3" required placeholder="Contoh: Jl. Raya Karangmalang No. 12, Sragen"></textarea>
-            </label>
-            <button type="submit" class="btn full" style="margin-top: 18px;">Kirim Pesanan ke WhatsApp</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="form">
+  <h3>Informasi Pengiriman & Metode</h3>
+  <form id="checkout-form" onsubmit="kirimWhatsApp(event)">
+    <label>
+      Nama Lengkap
+      <input type="text" id="nama" required placeholder="Contoh: Budi Santoso">
+    </label>
+    
+    <label style="margin-top: 12px;">
+      Nomor WhatsApp / HP
+      <input type="tel" id="telepon" required placeholder="Contoh: 081234567890">
+    </label>
+
+    <!-- TAMBAHAN PILIHAN METODE YANG SUDAH DIRAPIKAN -->
+    <label style="margin-top: 12px;">
+      Metode Pesanan
+      <select id="metode" style="width: 100%; margin-top: 4px; padding: 11px 13px; border: 2px solid #efd9d3; border-radius: 12px; font: inherit; background: var(--bg);">
+        <option value="Diantar">Diantar ke alamat</option>
+        <option value="Ambil di toko">Ambil di toko</option>
+        <option value="Makan di tempat">Makan di tempat</option>
+      </select>
+    </label>
+
+    <label style="margin-top: 12px;">
+      Alamat Lengkap / Catatan Pengiriman
+      <textarea id="alamat" rows="3" required placeholder="Contoh: Jl. Raya Karangmalang No. 12, Sragen"></textarea>
+    </label>
+    
+    <button type="submit" class="btn full" style="margin-top: 18px;">Kirim Pesanan ke WhatsApp</button>
+    </form>
+  </div>
+</div>
+</div>
+</section>
 
   <!-- FOOTER -->
   <footer>
