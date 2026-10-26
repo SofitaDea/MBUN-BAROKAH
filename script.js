@@ -1,5 +1,5 @@
 // Nomor WhatsApp Tujuan Pemesanan
-const WA_NUMBER = "6288973970168";
+const WA_NUMBER = "6287836345222";
 
 // Keranjang Belanja
 let keranjang = [];
