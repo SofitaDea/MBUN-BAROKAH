@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let current = 0;
 
-    // 1. Buat titik-titik indikator (dots) secara otomatis
+    // 1. Buat titik-titik indikator (dots) secara otomatis sesuai jumlah slide
     if (dotsBox) {
         dotsBox.innerHTML = '';
         for (let i = 0; i < slides.length; i++) {
@@ -156,9 +156,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // 2. Fungsi utama untuk berpindah slide
+    // 2. Fungsi utama untuk berpindah slide (Looping / Berputar)
     function goTo(index) {
-        // Efek berputar (looping) jika habis atau kurang dari 0
         current = (index + slides.length) % slides.length;
         
         // Geser track slider
