@@ -128,11 +128,59 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Logika Slider Testimoni Sederhana
-let currentSlide = 0;
-function geserSlide(arah) {
-    const track = document.getElementById('slidesTrack');
-    const totalSlides = track.children.length;
-    currentSlide = (currentSlide + arah + totalSlides) % totalSlides;
-    track.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
+// ==========================================
+// LOGIKA SLIDER TESTIMONI
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById('sliderTrack');
+    const slides = track ? track.children : [];
+    const dotsBox = document.getElementById('dotsContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    if (!track || slides.length === 0) return;
+
+    let current = 0;
+
+    // 1. Buat titik-titik indikator (dots) secara otomatis
+    if (dotsBox) {
+        dotsBox.innerHTML = '';
+        for (let i = 0; i < slides.length; i++) {
+            const dot = document.createElement("button");
+            dot.setAttribute("type", "button");
+            dot.setAttribute("aria-label", "Testimoni " + (i + 1));
+            dot.classList.add("dot");
+            if (i === 0) dot.classList.add("active");
+            dot.addEventListener("click", () => goTo(i));
+            dotsBox.appendChild(dot);
+        }
+    }
+
+    // 2. Fungsi utama untuk berpindah slide
+    function goTo(index) {
+        // Efek berputar (looping) jika habis atau kurang dari 0
+        current = (index + slides.length) % slides.length;
+        
+        // Geser track slider
+        track.style.transform = `translateX(-${current * 100}%)`;
+        
+        // Perbarui status aktif pada titik-titik dots
+        if (dotsBox) {
+            [...dotsBox.children].forEach((d, i) => {
+                d.classList.toggle("active", i === current);
+            });
+        }
+    }
+
+    // 3. Event listener untuk tombol navigasi
+    if (nextBtn) {
+        nextBtn.addEventListener("click", () => goTo(current + 1));
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener("click", () => goTo(current - 1));
+    }
+
+    // Inisialisasi awal di slide pertama
+    goTo(0);
+});
